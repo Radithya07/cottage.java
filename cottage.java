@@ -1,72 +1,154 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package cottage;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.util.Scanner;
 
 /**
  *
- * @author radit
+ * @author moklet
  */
-public class cottage{
+public class cottage {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+    Scanner input= new Scanner(System.in);
+    String kamar, hari;
+        System.out.println("jenis kamar");
+    kamar= input.nextLine();
+        System.out.println("jenis hari");
+    hari = input.nextLine();
+        System.out.println("lama menginap");
+    int lamaMenginap = input.nextInt(); 
+        System.out.println("jumlah orang");
+    int orang = input.nextInt();
+     int harga= 0;
+   
+    
+    if (kamar.equals("duku")){
+       if (hari.equals("weekday")){
+       harga = 915000;}
+       else if (hari.equals("weekend")) {
+       harga = 1025000;}
+       else if (hari.equals("holiday")) {
+       harga = 1225000;}
+      if (orang/2 ==1) {
+           System.out.println("tidak bisa memesan");
+       }
+      else {System.out.println("bisa memesan");}
     }
+    
+     if (kamar.equals("jeruk")){
+       if (hari.equals("weekday")){
+       harga = 915000;}
+       else if (hari.equals("weekend")) {
+       harga = 1025000;}
+       else if (hari.equals("holiday")) {
+       harga = 1225000;}
+      if (orang/2 ==1) {
+           System.out.println("tidak bisa memesan");
+       }  
+     else {System.out.println("bisa memesan");}
+     }
+      
+    
+     if (kamar.equals("alpukat")){
+       if (hari.equals("weekday")){
+       harga = 575000;}
+       else if (hari.equals("weekend")) {
+       harga = 695000;}
+       else if (hari.equals("holiday")) {
+       harga = 895000;}
+         System.out.println("bisa memesan");  
+     }
 
-    public class seleksiKondisiNo1 {
-
-        public static String formatRupiah(double uang) {
-            double harga = uang;
-
-            DecimalFormat kursIndonesia = (DecimalFormat) DecimalFormat.getCurrencyInstance();
-            DecimalFormatSymbols formatRp = new DecimalFormatSymbols();
-
-            formatRp.setCurrencySymbol("Rp. ");
-            formatRp.setMonetaryDecimalSeparator(',');
-            formatRp.setGroupingSeparator('.');
-
-            kursIndonesia.setDecimalFormatSymbols(formatRp);
-            return kursIndonesia.format(harga);
-        }
-        static Scanner Input = new Scanner(System.in);
-
-        public static String getInput(String params) {
-            System.out.print(params + ": ");
-            return Input.nextLine();
-        }
-
-        public static void main(String[] args) {
-            //Data pelanggan
-            String[] namaPelanggan = {"Galuh", "Indro", "Jedi", "Kanu"};
-            String[] alamatPelanggan = {"Sawojajar", "Kedung kandang", "Ijen", "Dinoyo"};
-            int[] golonganPelanggan = {1, 3, 2, 3};
-
-            int inId = Integer.parseInt(getInput("Masukkan Id")) - 1;
-            int gol = golonganPelanggan[inId];
-            int kwh = Integer.parseInt(getInput("Masukkan pemakaian listrik"));
-            int tagihan = switch (gol) {
-                case 1 ->
-                    1000;
-                case 2 ->
-                    1300;
-                case 3 ->
-                    1500;
-                default ->
-                    0;
-            } * kwh;
-            tagihan = tagihan < 50000 ? 50000 : tagihan;
-            tagihan += 13000;
-            System.out.printf("\nDATA PELANGGAN\n========\nNama pelanggan: %s\nAlamat: %s\nGolongan: %s\n", namaPelanggan[inId], alamatPelanggan[inId], gol);
-            System.out.println("Jumlah tagihan anda: " + formatRupiah(tagihan));
-
-        }
+      if (kamar.equals("jambu air")){
+       if (hari.equals("weekday")){
+       harga = 575000;}
+       else if (hari.equals("weekend")) {
+       harga = 695000;}
+       else if (hari.equals("holiday")) {
+       harga = 895000;}
+       System.out.println("bisa memesan"); 
+       }
+      
+       if (kamar.equals("melon")){
+       if (hari.equals("weekday")){
+       harga = 595000;}
+       else if (hari.equals("weekend")) {
+       harga = 715000;}
+       else if (hari.equals("holiday")) {
+       harga = 915000;}
+        if (orang/2 ==1) {
+           System.out.println("tidak bisa memesan");
+       }  
+     else {System.out.println("bisa memesan");}
+       }
+       
+        if (kamar.equals("durian")){
+       if (hari.equals("weekday")){
+       harga = 595000;}
+       else if (hari.equals("weekend")) {
+       harga = 715000;}
+       else if (hari.equals("holiday")) {
+       harga = 915000;}
+        if (orang/2 ==1) {
+           System.out.println("tidak bisa memesan");
+       }  
+     else {System.out.println("bisa memesan");}
+       }
+        
+          if (kamar.equals("belimbing")){
+       if (hari.equals("weekday")){
+       harga = 495000;}
+       else if (hari.equals("weekend")) {
+       harga = 575000;}
+       else if (hari.equals("holiday")) {
+       harga = 755000;}
+        if (orang/2 ==1) {
+           System.out.println("tidak bisa memesan");
+       }  
+     else {System.out.println("bisa memesan");}
+       }
+        
+           if (kamar.equals("mangga")){
+       if (hari.equals("weekday")){
+       harga = 495000;}
+       else if (hari.equals("weekend")) {
+       harga = 575000;}
+       else if (hari.equals("holiday")) {
+       harga = 755000;}
+        if (orang/2 ==1) {
+           System.out.println("tidak bisa memesan");
+       }  
+     else {System.out.println("bisa memesan");}
+       }
+           
+            if (kamar.equals("kedondong")){
+       if (hari.equals("weekday")){
+       harga = 495000;}
+       else if (hari.equals("weekend")) {
+       harga = 575000;}
+       else if (hari.equals("holiday")) {
+       harga = 755000;}
+        if (orang/2 ==1) {
+           System.out.println("tidak bisa memesan");
+       }  
+     else {System.out.println("bisa memesan");}
+       }
+     int total= lamaMenginap*harga;
+      
+        System.out.println("jenis kamar= "+kamar);
+         System.out.println("jenis hari= "+hari);
+          System.out.println("lama menginap= "+lamaMenginap);
+          System.out.println("jumlah orang= "+orang);
+           System.out.println("total= "+total);
     }
+    
 }
